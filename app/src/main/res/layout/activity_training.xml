@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrainingActivity">
+
+    <View
+        android:id="@+id/viewPushup"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:background="@drawable/rounded_corners"
+        app:layout_constraintBottom_toTopOf="@+id/dividerTrainig"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imagePushup"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/light_grey"
+        app:layout_constraintStart_toStartOf="@+id/viewPushup"
+        app:layout_constraintTop_toTopOf="@+id/viewPushup"
+        app:srcCompat="@drawable/ic_training_24" />
+
+    <android.widget.Button
+        android:id="@+id/btnPushup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp"
+        android:background="@color/btn_orange"
+        android:text="@string/starten"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/viewPushup"
+        app:layout_constraintEnd_toEndOf="@+id/viewPushup" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/pushupTraining"
+        android:textSize="25sp"
+        app:layout_constraintStart_toEndOf="@+id/imagePushup"
+        app:layout_constraintTop_toTopOf="@+id/viewPushup" />
+
+    <EditText
+        android:id="@+id/etSets"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/imagePushup" />
+
+    <EditText
+        android:id="@+id/etReps"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="55dp"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/etSets" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/sets"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/viewPushup"
+        app:layout_constraintTop_toBottomOf="@+id/imagePushup" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/reps"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/viewPushup"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <View
+        android:id="@+id/dividerTrainig"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginBottom="75dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <android.widget.Button
+        android:id="@+id/btnListT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableTop="@drawable/ic_list_24"
+        android:text="@string/progress"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnSmartballT"
+        app:layout_constraintTop_toBottomOf="@+id/dividerTrainig" />
+
+    <android.widget.Button
+        android:id="@+id/btnTrainingT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableTop="@drawable/ic_training_24"
+        android:drawableTint="@color/orange"
+        android:text="@string/training"
+        android:textColor="@color/orange"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnSmartballT"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerTrainig" />
+
+    <android.widget.Button
+        android:id="@+id/btnSmartballT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:drawableTop="@drawable/ic_smartball_24"
+        android:text="@string/smartball"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dividerTrainig" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
